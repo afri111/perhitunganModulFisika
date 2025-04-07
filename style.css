@@ -164,6 +164,11 @@ footer {
     width: 100%;
 }
 
+.cli {
+    text-decoration: none;
+    color: white;
+}
+
 @media (max-width: 768px) {
     .sb {
         transform: translateX(250px);
