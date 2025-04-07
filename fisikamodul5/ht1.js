@@ -29,6 +29,8 @@ function resY() {
 
 // =========================== DATA CAL ======================== //
 
+const lteori = 0.000000632;
+
 function ht1() {
     const rows = [
         { id: 1, l: 0.5, d: 0.05 },
@@ -59,7 +61,7 @@ function ht1() {
         const rata = (lambda1 + lambda2 + lambda3) / 3;
         document.getElementById(`la${n}`).innerText = rata.toExponential(2);
 
-        const ksr = ((Math.max(lambda1, lambda2, lambda3) - Math.min(lambda1, lambda2, lambda3)) / rata) * 100;
+        const ksr = ((rata - lteori) / lteori) / 100;
         document.getElementById(`k0${n}`).innerText = ksr.toFixed(2) + "%";
     });
 }
@@ -94,7 +96,7 @@ function ht2() {
         const rata = (lambda1 + lambda2 + lambda3) / 3;
         document.getElementById(`2la${n}`).innerText = rata.toExponential(2);
 
-        const ksr = ((Math.max(lambda1, lambda2, lambda3) - Math.min(lambda1, lambda2, lambda3)) / rata) * 100;
+        const ksr = ((rata - lteori) / lteori) / 100;
         document.getElementById(`2k0${n}`).innerText = ksr.toFixed(2) + "%";
     });
 }
@@ -125,7 +127,7 @@ function ht3() {
         const rata = (lambda1 + lambda2 + lambda3) / 3;
         document.getElementById(`3la${n}`).innerText = rata.toExponential(2);
 
-        const ksr = ((Math.max(lambda1, lambda2, lambda3) - Math.min(lambda1, lambda2, lambda3)) / rata) * 100;
+        const ksr = ((rata - lteori) / lteori) / 100;
         document.getElementById(`3k0${n}`).innerText = ksr.toFixed(2) + "%";
     });
 }
