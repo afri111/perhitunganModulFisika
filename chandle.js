@@ -2,7 +2,7 @@ const blobURL = "https://jsonblob.com/api/jsonBlob/";
 
 async function lCom() {
     try {
-        const res = await fetch(blobURL);
+        const res = await fetch(blobURL + '1359019487327870976');
         const data = await res.json();
 
         const ct = document.getElementById("kCon");
