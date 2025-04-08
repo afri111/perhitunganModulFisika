@@ -2,94 +2,157 @@
 <html lang="id">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Under Development</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #121212;
-            color: #e1e4e8;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            text-align: center;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, dinitial-scale=1.0">
+  <title>Modul 1 AFRI</title>
+  <link rel="stylesheet" href="./style.css">
 
-        .container {
-            max-width: 600px;
-            width: 100%;
-            padding: 30px;
-            background-color: #2d2d2d;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-        }
-
-        h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            color: #f9f9f9;
-        }
-
-        p {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-        }
-
-        
-        .accent {
-            color: #58a6ff;
-            font-weight: bold;
-        }
-        
-        .icon {
-            font-size: 5rem;
-            color: #58a6ff;
-            margin-bottom: 20px;
-        }
-        
-        .l1 {
-            color: #58a6ff;
-            text-decoration: none;
-            font-size: 1.2rem;
-            transition: color 0.3s;
-        }
-        
-        .l2 {
-            padding: 10px;
-            background-color: #cc0000;
-            color: rgb(255, 255, 255);
-            text-decoration: none;
-            font-size: 1.2rem;
-            border-radius: 10px;
-            transition: all 0.3s;
-        }
-
-        .l1:hover {
-            color: #00ff00;
-        }
-
-        .l2:hover {
-            background-color: #ff0000;
-        }
-    </style>
 </head>
 
 <body>
+  <header>
+    <h1>Perhitungan Fisika Modul 1</h1>
+    <nav>
+      <a href="./../index.html" style="color: white; margin: 0 15px;">Home</a>
+    </nav>
+  </header>
 
-    <div class="container">
-        <div class="icon">🚧</div>
-        <h1>Sabar wak</h1>
-        <p>Lagi masa pembuatan Web nya</p>
-        <p>btw kalo mau bantu, dm aja <a href="https://wa.me/6288706494610" class="l1" target="_blank">WhatsApp</a> gw wak.</p> <hr><br>
-        <a class="l2" href="./../index.html">Balik woi</a> <br><br><br>
-        <i style="font-size: 12px;">&copy;2025 Github.</i>
+  <br><br>
+
+
+  <span>
+    <div class="biji wi"> <!-- TABEL 1 AFRI -->
+      <h3>Tabel 1. Solenoida <input id="tl1" style="width: 35px; font-size: 15px;" placeholder=". . ." type="number" step="any"> lilitan</h3>
+      <table>
+        <tr>
+          <th rowspan="2">No.</th>
+          <th colspan="3">B (x10<sup>-3</sup> Tesla)</th>
+        </tr>
+        <tr>
+          <th>I = 0,7 A</th>
+          <th>I = 0,6 A</th>
+          <th>I = 0,5 A</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td><input id="I71" type="number" step="any"></td>
+          <td><input id="I61" type="number" step="any"></td>
+          <td><input id="I51" type="number" step="any"></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td><input id="I72" type="number" step="any"></td>
+          <td><input id="I62" type="number" step="any"></td>
+          <td><input id="I52" type="number" step="any"></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td><input id="I73" type="number" step="any"></td>
+          <td><input id="I63" type="number" step="any"></td>
+          <td><input id="I53" type="number" step="any"></td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td><input id="I74" type="number" step="any"></td>
+          <td><input id="I64" type="number" step="any"></td>
+          <td><input id="I54" type="number" step="any"></td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td><input id="I75" type="number" step="any"></td>
+          <td><input id="I65" type="number" step="any"></td>
+          <td><input id="I55" type="number" step="any"></td>
+        </tr>
+        <tr>
+          <td><i>x<sub>total</sub></i></td>
+          <td id="i7x"></td>
+          <td id="i6x"></td>
+          <td id="i5x"></td>
+        </tr>
+        <tr>
+          <td><i>&#x1E8F;</i></td>
+          <td id="i7r"></td>
+          <td id="i6r"></td>
+          <td id="i5r"></td>
+        </tr>
+      </table>
+
+      <br>
+
+      <table>
+        <tr>
+          <th colspan="4" style="background-color: rgb(211, 255, 255);">Hasil Perhitungan B</th>
+        </tr>
+        <tr>
+          <th>No.</th>
+          <th>I = 0,7 A</th>
+          <th>I = 0,6 A</th>
+          <th>I = 0,5 A</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td id="b71"></td>
+          <td id="b61"></td>
+          <td id="b51"></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td id="b72"></td>
+          <td id="b62"></td>
+          <td id="b52"></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td id="b73"></td>
+          <td id="b63"></td>
+          <td id="b53"></td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td id="b74"></td>
+          <td id="b64"></td>
+          <td id="b54"></td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td id="b75"></td>
+          <td id="b65"></td>
+          <td id="b55"></td>
+        </tr>
+      </table>
     </div>
 
 
+    <br>
+
+
+    <br><br><br>
+
+    <br>
+    <button id="btn1" class="biji apply ge" onclick="bijiNgitung()">Hitung</button>
+    &nbsp; &nbsp;
+    <button id="btn2" class="biji apply re" onclick="bijiReset()">Reset</button>
+
+    <div id="overlay"></div>
+    <div id="pp">
+      <p>Kamu yakin ingin reset?</p>
+      <button class="yes" onclick="resY()">Ya</button>
+      <button class="no" onclick="resN()">Tidak</button>
+    </div>
+
+    <br><br>
+    Thanks to: <br>
+    - <a class="cl" href="https://www.w3schools.com/" target="_blank">W3 Schools</a> <br>
+    - <a class="cl" href="https://getcssscan.com/" target="_blank">Get CSS Scan</a> <br>
+    <br><br><br><br><br>
+  </span>
+
+
+  <footer>
+    <p>&copy;2025 Muhammad Afriandy. 124130116</p>
+  </footer>
+
+  <script src="./htng.js"></script>
 </body>
 
 </html>

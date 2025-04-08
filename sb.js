@@ -17,8 +17,25 @@ cBtn.addEventListener('click', () => {
     tgb.style.display = 'block'
 });
 
+// =================== SHOW/HIDE COMMENT ====================== //
+const hidek = document.getElementById('hidek');
+const showk = document.getElementById('showk');
+const hidehandle = document.getElementById('hidehandle');
 
-// ==================== HANDLE COPY ============================= //
+hidek.addEventListener('click', () => {
+    hidehandle.style.display = 'none';
+    hidek.style.display = 'none';
+    showk.style.display = '';
+});
+
+showk.addEventListener('click', () => {
+    hidehandle.style.display = '';
+    hidek.style.display = '';
+    showk.style.display = 'none';
+})
+
+
+// ==================== HANDLE COPY =========================== //
 const alley = [1, 2, 3, 4, 5, 6];
 alley.forEach(all => {
     const n = all;;
@@ -36,6 +53,4 @@ alley.forEach(all => {
                 console.error('Gagal menyalin teks:', err);
             });
     });
-})
-
-
+});
