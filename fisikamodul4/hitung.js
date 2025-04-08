@@ -1,226 +1,98 @@
-let c0 = Math.pow(1, 2);
-let c1 = Math.pow( 0.9397, 2);
-let c2 = Math.pow( 0.7660, 2);
-let c3 = Math.pow( 0.5, 2);
-let c4 = Math.pow( 0.1736, 2);
-let c5 = Math.pow( -0.1736, 2);
-let c6 = Math.pow( -0.5, 2);
-let c7 = Math.pow( -0.7760, 2);
-let c8 = Math.pow( -0.9397, 2);
-let c9 = Math.pow( -1, 2);
+let c1 = Math.pow(1, 2);
+let c2 = Math.pow(0.9397, 2);
+let c3 = Math.pow(0.7660, 2);
+let c4 = Math.pow(0.5, 2);
+let c5 = Math.pow(0.1736, 2);
+let c6 = Math.pow(-0.1736, 2);
+let c7 = Math.pow(-0.5, 2);
+let c8 = Math.pow(-0.7760, 2);
+let c9 = Math.pow(-0.9397, 2);
+let c0 = Math.pow(-1, 2);
+
+
+addEventListener("keypress", function (event) {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        document.getElementById("btn1").click();
+    }
+});
 
-
-function hd1() {
-    let val1 = document.getElementById("in1").value;
-    let h1 = val1 * c0;
-    document.getElementById("nin1").value = h1;
-
-
-    let val2 = document.getElementById("in2").value;
-    let h2 = val2 * c1;
-    document.getElementById("nin2").value = h2;
-
-    
-    let val3 = document.getElementById("in3").value;
-    let h3 = val3 * c2;
-    document.getElementById("nin3").value = h3;
-
-
-    let val4 = document.getElementById("in4").value;
-    let h4 = val4 * c3
-    document.getElementById("nin4").value = h4;
-    
-
-    let val5 = document.getElementById("in5").value;
-    let h5 = val5 * c4;
-    document.getElementById("nin5").value = h5;
-
-
-    let val6 = document.getElementById("in6").value;
-    let h6 = val6 * c5
-    document.getElementById("nin6").value = h6;
-
-
-    let val7 = document.getElementById("in7").value;
-    let h7 = val7 * c6
-    document.getElementById("nin7").value = h7;
-
-
-    let val8 = document.getElementById("in8").value;
-    let h8 = val8 * c7;
-    document.getElementById("nin8").value = h8;
-
-
-    let val9 = document.getElementById("in9").value;
-    let h9 = val9 * c8;
-    document.getElementById("nin9").value = h9;
-
-
-    let val0 = document.getElementById("in0").value;
-    let h0 = val0 * c9;
-    document.getElementById("nin0").value = h0;
-
-}
-
-function hd2() {
-    let val1 = document.getElementById("din1").value;
-    let h1 = val1 * c0;
-    document.getElementById("dndin1").value = h1;
-
-
-    let val2 = document.getElementById("din2").value;
-    let h2 = val2 * c1;
-    document.getElementById("dndin2").value = h2;
-
-    
-    let val3 = document.getElementById("din3").value;
-    let h3 = val3 * c2;
-    document.getElementById("dndin3").value = h3;
-
-
-    let val4 = document.getElementById("din4").value;
-    let h4 = val4 * c3
-    document.getElementById("dndin4").value = h4;
-    
-
-    let val5 = document.getElementById("din5").value;
-    let h5 = val5 * c4;
-    document.getElementById("dndin5").value = h5;
-
-
-    let val6 = document.getElementById("din6").value;
-    let h6 = val6 * c5
-    document.getElementById("dndin6").value = h6;
-
-
-    let val7 = document.getElementById("din7").value;
-    let h7 = val7 * c6
-    document.getElementById("dndin7").value = h7;
-
-
-    let val8 = document.getElementById("din8").value;
-    let h8 = val8 * c7;
-    document.getElementById("dndin8").value = h8;
-
-
-    let val9 = document.getElementById("din9").value;
-    let h9 = val9 * c8;
-    document.getElementById("dndin9").value = h9;
-
-
-    let val0 = document.getElementById("din0").value;
-    let h0 = val0 * c9;
-    document.getElementById("dndin0").value = h0;
-
-}
-
-function hd3() {
-    let val1 = document.getElementById("tin1").value;
-    let h1 = val1 * c0;
-    document.getElementById("dntin1").value = h1;
-
-
-    let val2 = document.getElementById("tin2").value;
-    let h2 = val2 * c1;
-    document.getElementById("dntin2").value = h2;
-
-    
-    let val3 = document.getElementById("tin3").value;
-    let h3 = val3 * c2;
-    document.getElementById("dntin3").value = h3;
-
-
-    let val4 = document.getElementById("tin4").value;
-    let h4 = val4 * c3
-    document.getElementById("dntin4").value = h4;
-    
-
-    let val5 = document.getElementById("tin5").value;
-    let h5 = val5 * c4;
-    document.getElementById("dntin5").value = h5;
-
-
-    let val6 = document.getElementById("tin6").value;
-    let h6 = val6 * c5
-    document.getElementById("dntin6").value = h6;
-
-
-    let val7 = document.getElementById("tin7").value;
-    let h7 = val7 * c6
-    document.getElementById("dntin7").value = h7;
-
-
-    let val8 = document.getElementById("tin8").value;
-    let h8 = val8 * c7;
-    document.getElementById("dntin8").value = h8;
-
-
-    let val9 = document.getElementById("tin9").value;
-    let h9 = val9 * c8;
-    document.getElementById("dntin9").value = h9;
-
-
-    let val0 = document.getElementById("tin0").value;
-    let h0 = val0 * c9;
-    document.getElementById("dntin0").value = h0;
-
-}
-
-function hd4() {
-    let val1 = document.getElementById("emp1").value;
-    let h1 = val1 * c0;
-    document.getElementById("dnemp1").value = h1;
-
-
-    let val2 = document.getElementById("emp2").value;
-    let h2 = val2 * c1;
-    document.getElementById("dnemp2").value = h2;
-
-    
-    let val3 = document.getElementById("emp3").value;
-    let h3 = val3 * c2;
-    document.getElementById("dnemp3").value = h3;
-
-
-    let val4 = document.getElementById("emp4").value;
-    let h4 = val4 * c3
-    document.getElementById("dnemp4").value = h4;
-    
-
-    let val5 = document.getElementById("emp5").value;
-    let h5 = val5 * c4;
-    document.getElementById("dnemp5").value = h5;
-
-
-    let val6 = document.getElementById("emp6").value;
-    let h6 = val6 * c5
-    document.getElementById("dnemp6").value = h6;
-
-
-    let val7 = document.getElementById("emp7").value;
-    let h7 = val7 * c6
-    document.getElementById("dnemp7").value = h7;
-
-
-    let val8 = document.getElementById("emp8").value;
-    let h8 = val8 * c7;
-    document.getElementById("dnemp8").value = h8;
-
-
-    let val9 = document.getElementById("emp9").value;
-    let h9 = val9 * c8;
-    document.getElementById("dnemp9").value = h9;
-
-
-    let val0 = document.getElementById("emp0").value;
-    let h0 = val0 * c9;
-    document.getElementById("dnemp0").value = h0;
-
-}
 
 function bijisegalanya() {
-    hd1();
-    hd2();
-    hd3();
-    hd4();
+    //in1 nin1
+    const arr = [
+        { i: "in", o: "nin", v: "s" },
+        { i: "din", o: "dndin", v: "d" },
+        { i: "tin", o: "dntin", v: "t" },
+        { i: "emp", o: "dnemp", v: "e" }
+    ]
+
+    arr.forEach(al => {
+        const i = al.i;
+        const o = al.o;
+        const v = al.v;
+
+        const v1 = +document.getElementById(`${i}1`).value;
+        const v2 = +document.getElementById(`${i}2`).value;
+        const v3 = +document.getElementById(`${i}3`).value;
+        const v4 = +document.getElementById(`${i}4`).value;
+        const v5 = +document.getElementById(`${i}5`).value;
+        const v6 = +document.getElementById(`${i}6`).value;
+        const v7 = +document.getElementById(`${i}7`).value;
+        const v8 = +document.getElementById(`${i}8`).value;
+        const v9 = +document.getElementById(`${i}9`).value;
+        const v0 = +document.getElementById(`${i}0`).value;
+
+        let h1 = v1 * c1;
+        let h2 = v2 * c2;
+        let h3 = v3 * c3;
+        let h4 = v4 * c4;
+        let h5 = v5 * c5;
+        let h6 = v6 * c6;
+        let h7 = v7 * c7;
+        let h8 = v8 * c8;
+        let h9 = v9 * c9;
+        let h0 = v0 * c0;
+
+        document.getElementById(`${o}1`).value = h1.toFixed(3);
+        document.getElementById(`${o}2`).value = h2.toFixed(3);
+        document.getElementById(`${o}3`).value = h3.toFixed(3);
+        document.getElementById(`${o}4`).value = h4.toFixed(3);
+        document.getElementById(`${o}5`).value = h5.toFixed(3);
+        document.getElementById(`${o}6`).value = h6.toFixed(3);
+        document.getElementById(`${o}7`).value = h7.toFixed(3);
+        document.getElementById(`${o}8`).value = h8.toFixed(3);
+        document.getElementById(`${o}9`).value = h9.toFixed(3);
+        document.getElementById(`${o}0`).value = h0.toFixed(3);
+
+        const all1 = [v1, v2, v3, v4, v5, v6, v7, v8, v9, v0];
+        const all2 = [h1, h2, h3, h4, h5, h6, h7, h8, h9, h0];
+
+        function hrt(dat) {
+            const total = dat.reduce((sum, val) => sum + val, 0);
+            return total / 10;
+        }
+
+        function hsd(dat, rt) {
+            const n = dat.length;
+            const varians = dat.reduce((sum, val) => sum + Math.pow(val - rt, 2), 0) / (n * (n - 1));
+            return Math.sqrt(varians);
+        }
+
+        function hkt(delI, rt) {
+            return (1 - (delI / rt)) * 100;
+        }
+
+        //rlm rlo s k
+        document.getElementById(`${v}rlm`).value = hrt(all1).toFixed(3);
+        document.getElementById(`${v}rlo`).value = hrt(all2).toFixed(3);
+
+        document.getElementById(`${v}slm`).value = hsd(all1, (hrt(all1))).toFixed(3);
+        document.getElementById(`${v}slo`).value = hsd(all2, (hrt(all2))).toFixed(3);
+
+        document.getElementById(`${v}klm`).value = hkt((hsd(all1, (hrt(all1)))), (hrt(all1))).toFixed(3) + '%';
+        document.getElementById(`${v}klo`).value = hkt((hsd(all2, (hrt(all2)))), (hrt(all2))).toFixed(3) + '%';
+
+    })
+
 }
