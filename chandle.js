@@ -74,5 +74,3 @@ fetch('./unable/i.json')
     .catch(error => {
         console.error('Terjadi kesalahan:', error);
     });
-
-sco();
