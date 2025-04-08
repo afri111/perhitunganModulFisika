@@ -6,8 +6,9 @@ fetch('./unable/i.json')
         return response.json();
     })
     .then(val => {
-        const ini = val.idea.data;
-        const bUrl = val.niggas.ur;
+        const ini = val.ideaO.data;
+        const bUrl = val.idea0.ur;
+        const kptol = val.kasar;
 
         async function lCom() {
             try {
@@ -31,11 +32,10 @@ fetch('./unable/i.json')
             }
         }
 
-        async function sCom() {
+        window.sco = async function sCom() {
             const nme = document.getElementById("nme").value || "Nigger";
             const cmn = document.getElementById("cmn").value.trim();
             if (!cmn) return alert("Komen jangan kosong blog!");
-            const kptol = ['ngewe', 'ngentot', 'anjing', 'babi', 'bangsat', 'peler', 'kontol', 'memek', 'penis', 'vagina', 'lonte', 'pepek', 'peli', 'teling'];
             const kl = cmn.toLowerCase();
             const rilltoxic = kptol.some(kpt => kl.includes(kpt));
 
@@ -68,7 +68,11 @@ fetch('./unable/i.json')
 
         lCom();
 
+        
+
     })
     .catch(error => {
         console.error('Terjadi kesalahan:', error);
     });
+
+sco();
