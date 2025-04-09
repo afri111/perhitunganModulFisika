@@ -8,8 +8,10 @@ addEventListener("keypress", function (event) {
 const pp = document.getElementById("pp");
 const overlay = document.getElementById("overlay");
 const exitBtn = document.getElementById("btn2");
+const htbtn = document.getElementById("btn1");
 
 exitBtn.addEventListener("click", sp);
+htbtn.addEventListener("click", bijiNgitung);
 
 function sp() {
     pp.style.display = "block";
@@ -28,61 +30,134 @@ function resY() {
 
 
 // =========================== DATA CAL ======================== //
+const mo = 4 * 3.1415926535897 * 0.0000001;
 
 function cal1() {
     const rows = [7, 6, 5];
 
     rows.forEach(row => {
         const n = row;
+        const t = 1; //tabel 
 
-        const i1 = parseFloat(document.getElementById(`I${n}1`).value) || 0; 
-        const i2 = parseFloat(document.getElementById(`I${n}1`).value) || 0; 
-        const i3 = parseFloat(document.getElementById(`I${n}1`).value) || 0; 
-        const i4 = parseFloat(document.getElementById(`I${n}1`).value) || 0; 
-        const i5 = parseFloat(document.getElementById(`I${n}1`).value) || 0;
-        
-        const xtot = (i1 + i2 + i3 + i4 + i5);
-        document.getElementById(`i${n}x`).innerText = xtot.toExponential(2);
-        
-        const xrat = xtot / 5;
-        document.getElementById(`i${n}r`).innerText = xrat.toExponential(2);
+        const tl = parseFloat(document.getElementById(`tl${t}`).value);
 
-        
+        const i1 = parseFloat(document.getElementById(`${t}I${n}1`).value) || 0;
+        const i2 = parseFloat(document.getElementById(`${t}I${n}2`).value) || 0;
+        const i3 = parseFloat(document.getElementById(`${t}I${n}3`).value) || 0;
+        const i4 = parseFloat(document.getElementById(`${t}I${n}4`).value) || 0;
+        const i5 = parseFloat(document.getElementById(`${t}I${n}5`).value) || 0;
+
+        const all1 = [i1, i2, i3, i4, i5];
+
+        function suma(dat) {
+            const sum = dat.reduce((acc, cur) => acc + cur, 0);
+            return sum;
+        }
+
+        const kalisep3 = (suma(all1) * 0.001);
+
+        document.getElementById(`${t}i${n}x`).innerText = (kalisep3).toExponential(3);
+        document.getElementById(`${t}i${n}r`).innerText = (kalisep3 / all1.length).toExponential(3);
+
+        // jl: jumlah lilitan; dat: data percobaan
+        function forb(jl, dat) {
+            const total = mo * jl * dat / (suma(all1));
+            return total;
+        }
+
+        document.getElementById(`${t}b${n}1`).innerText = forb(tl, (i1 * 0.001)).toExponential(3);
+        document.getElementById(`${t}b${n}2`).innerText = forb(tl, (i2 * 0.001)).toExponential(3);
+        document.getElementById(`${t}b${n}3`).innerText = forb(tl, (i3 * 0.001)).toExponential(3);
+        document.getElementById(`${t}b${n}4`).innerText = forb(tl, (i4 * 0.001)).toExponential(3);
+        document.getElementById(`${t}b${n}5`).innerText = forb(tl, (i5 * 0.001)).toExponential(3);
     })
 }
 
-function ht3() {
-    const rows = [
-        { id: 1, l: 0.5, d: 0.2 },
-        { id: 2, l: 1, d: 0.2 },
-    ];
+function cal2() {
+    const rows = [7, 6, 5];
 
     rows.forEach(row => {
-        const n = row.id;
-        const l = row.l;
-        const d = row.d;
+        const n = row;
+        const t = 2; //tabel 
 
-        const y1 = parseFloat(document.getElementById(`3y${n}1`).value) || 0;
-        const y2 = parseFloat(document.getElementById(`3y${n}2`).value) || 0;
-        const y3 = parseFloat(document.getElementById(`3y${n}3`).value) || 0;
+        const tl = parseFloat(document.getElementById(`tl${t}`).value);
 
-        const lambda1 = (d * y1) / (l * 1);
-        const lambda2 = (d * y2) / (l * 2);
-        const lambda3 = (d * y3) / (l * 3);
+        const i1 = parseFloat(document.getElementById(`${t}I${n}1`).value) || 0;
+        const i2 = parseFloat(document.getElementById(`${t}I${n}2`).value) || 0;
+        const i3 = parseFloat(document.getElementById(`${t}I${n}3`).value) || 0;
+        const i4 = parseFloat(document.getElementById(`${t}I${n}4`).value) || 0;
+        const i5 = parseFloat(document.getElementById(`${t}I${n}5`).value) || 0;
 
-        document.getElementById(`3l${n}1`).innerText = lambda1.toExponential(2);
-        document.getElementById(`3l${n}2`).innerText = lambda2.toExponential(2);
-        document.getElementById(`3l${n}3`).innerText = lambda3.toExponential(2);
+        const all1 = [i1, i2, i3, i4, i5];
 
-        const rata = (lambda1 + lambda2 + lambda3) / 3;
-        document.getElementById(`3la${n}`).innerText = rata.toExponential(2);
+        function suma(dat) {
+            const sum = dat.reduce((acc, cur) => acc + cur, 0);
+            return sum;
+        }
 
-        const ksr = ((rata - lteori) / lteori) / 100;
-        document.getElementById(`3k0${n}`).innerText = ksr.toFixed(2) + "%";
-    });
+        const kalisep3 = (suma(all1) * 0.001);
+
+        document.getElementById(`${t}i${n}x`).innerText = (kalisep3).toExponential(3);
+        document.getElementById(`${t}i${n}r`).innerText = (kalisep3 / all1.length).toExponential(3);
+
+        // jl: jumlah lilitan; dat: data percobaan
+        function forb(jl, dat) {
+            const total = mo * jl * dat / (suma(all1));
+            return total;
+        }
+
+        document.getElementById(`${t}b${n}1`).innerText = forb(tl, (i1 * 0.001)).toExponential(3);
+        document.getElementById(`${t}b${n}2`).innerText = forb(tl, (i2 * 0.001)).toExponential(3);
+        document.getElementById(`${t}b${n}3`).innerText = forb(tl, (i3 * 0.001)).toExponential(3);
+        document.getElementById(`${t}b${n}4`).innerText = forb(tl, (i4 * 0.001)).toExponential(3);
+        document.getElementById(`${t}b${n}5`).innerText = forb(tl, (i5 * 0.001)).toExponential(3);
+    })
+}
+
+function cal3() {
+    const rows = [7, 6, 5];
+
+    rows.forEach(row => {
+        const n = row;
+        const t = 3; //tabel 
+
+        const tl = parseFloat(document.getElementById(`tl${t}`).value);
+
+        const i1 = parseFloat(document.getElementById(`${t}I${n}1`).value) || 0;
+        const i2 = parseFloat(document.getElementById(`${t}I${n}2`).value) || 0;
+        const i3 = parseFloat(document.getElementById(`${t}I${n}3`).value) || 0;
+        const i4 = parseFloat(document.getElementById(`${t}I${n}4`).value) || 0;
+        const i5 = parseFloat(document.getElementById(`${t}I${n}5`).value) || 0;
+
+        const all1 = [i1, i2, i3, i4, i5];
+
+        function suma(dat) {
+            const sum = dat.reduce((acc, cur) => acc + cur, 0);
+            return sum;
+        }
+
+        const kalisep3 = (suma(all1) * 0.001);
+
+        document.getElementById(`${t}i${n}x`).innerText = (kalisep3).toExponential(3);
+        document.getElementById(`${t}i${n}r`).innerText = (kalisep3 / all1.length).toExponential(3);
+
+        // jl: jumlah lilitan; dat: data percobaan
+        function forb(jl, dat) {
+            const total = mo * jl * dat / (suma(all1));
+            return total;
+        }
+
+        document.getElementById(`${t}b${n}1`).innerText = forb(tl, (i1 * 0.001)).toExponential(3);
+        document.getElementById(`${t}b${n}2`).innerText = forb(tl, (i2 * 0.001)).toExponential(3);
+        document.getElementById(`${t}b${n}3`).innerText = forb(tl, (i3 * 0.001)).toExponential(3);
+        document.getElementById(`${t}b${n}4`).innerText = forb(tl, (i4 * 0.001)).toExponential(3);
+        document.getElementById(`${t}b${n}5`).innerText = forb(tl, (i5 * 0.001)).toExponential(3);
+    })
 }
 
 
 function bijiNgitung() {
     cal1();
+    cal2();
+    cal3();
 }

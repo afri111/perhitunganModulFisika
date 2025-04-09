@@ -66,13 +66,13 @@ td[colspan] {
 #pp {
     display: none;
     position: fixed;
-    top: 50%;
+    top: 47%;
     left: 50%;
     transform: translate(-50%, -50%);
     background: white;
     border: 2px solid #ccc;
     border-radius: 10px;
-    padding: 20px;
+    padding: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     z-index: 999;
 }
@@ -106,6 +106,30 @@ td[colspan] {
     z-index: 100;
 }
 
+@keyframes kelipkelipnjir {
+    0% {
+        background-color: rgb(0, 255, 234);
+    }
+
+    50% {
+        background-color: rgb(238, 255, 0);
+    }
+
+    100% {
+        background-color: rgb(0, 255, 234);
+    }
+}
+
+.intl {
+    border-radius: 10px;
+    animation-name: kelipkelipnjir;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    /* background-color: rgb(0, 204, 255); */
+    width: 50px;
+    font-size: 15px;
+}
+
 .ge {
     background-color: #00ff00;
 }
@@ -117,6 +141,8 @@ td[colspan] {
 .wi {
     background-color: #ffffff;
 }
+
+
 
 .biji {
     align-self: center;

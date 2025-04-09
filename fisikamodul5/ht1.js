@@ -7,8 +7,10 @@ addEventListener("keypress", function (event) {
 
 const pp = document.getElementById("pp");
 const overlay = document.getElementById("overlay");
+const htbtn = document.getElementById("btn1");
 const exitBtn = document.getElementById("btn2");
 
+htbtn.addEventListener("click", bijiNgitung);
 exitBtn.addEventListener("click", sp);
 
 function sp() {

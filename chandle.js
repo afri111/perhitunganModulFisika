@@ -33,7 +33,7 @@ fetch('./unable/i.json')
         }
 
         window.sco = async function sCom() {
-            const nme = document.getElementById("nme").value || "Nigger";
+            const nme = document.getElementById("nme").value || "MahaSigma";
             const cmn = document.getElementById("cmn").value.trim();
             if (!cmn) return alert("Komen jangan kosong blog!");
             const kl = cmn.toLowerCase();
