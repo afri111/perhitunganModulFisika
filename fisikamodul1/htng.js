@@ -40,6 +40,8 @@ function cal1() {
         const t = 1; //tabel 
 
         const tl = parseFloat(document.getElementById(`tl${t}`).value);
+        const vtab = parseFloat(document.getElementById(`vt${t}`).value) || 0;
+
 
         const i1 = parseFloat(document.getElementById(`${t}I${n}1`).value) || 0;
         const i2 = parseFloat(document.getElementById(`${t}I${n}2`).value) || 0;
@@ -61,7 +63,7 @@ function cal1() {
 
         // jl: jumlah lilitan; dat: data percobaan
         function forb(jl, dat) {
-            const total = mo * jl * dat / (suma(all1));
+            const total = mo * jl * dat / vtab;
             return total;
         }
 
@@ -81,6 +83,8 @@ function cal2() {
         const t = 2; //tabel 
 
         const tl = parseFloat(document.getElementById(`tl${t}`).value);
+        const vtab = parseFloat(document.getElementById(`vt${t}`).value) || 0;
+
 
         const i1 = parseFloat(document.getElementById(`${t}I${n}1`).value) || 0;
         const i2 = parseFloat(document.getElementById(`${t}I${n}2`).value) || 0;
@@ -102,7 +106,7 @@ function cal2() {
 
         // jl: jumlah lilitan; dat: data percobaan
         function forb(jl, dat) {
-            const total = mo * jl * dat / (suma(all1));
+            const total = mo * jl * dat / vtab;
             return total;
         }
 
@@ -122,6 +126,7 @@ function cal3() {
         const t = 3; //tabel 
 
         const tl = parseFloat(document.getElementById(`tl${t}`).value);
+        const vtab = parseFloat(document.getElementById(`vt${t}`).value) || 0;
 
         const i1 = parseFloat(document.getElementById(`${t}I${n}1`).value) || 0;
         const i2 = parseFloat(document.getElementById(`${t}I${n}2`).value) || 0;
@@ -143,7 +148,7 @@ function cal3() {
 
         // jl: jumlah lilitan; dat: data percobaan
         function forb(jl, dat) {
-            const total = mo * jl * dat / (suma(all1));
+            const total = mo * jl * dat / vtab;
             return total;
         }
 

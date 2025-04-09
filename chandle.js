@@ -41,7 +41,7 @@ fetch('./unable/i.json')
         window.sco = async function sCom() {
             const nme = document.getElementById("nme").value || "MahaSigma";
             const cmn = document.getElementById("cmn").value.trim();
-            if (!cmn) return alert("Komen jangan kosong blog!");
+            if (!cmn) return alert("Komentar nya ga boleh kosong ya :)");
             const kl = cmn.toLowerCase();
             const rilltoxic = kptol.some(kpt => kl.includes(kpt));
 
