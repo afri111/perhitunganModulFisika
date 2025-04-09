@@ -1,3 +1,9 @@
+const scok = document.getElementById('blyatman');
+
+scok.addEventListener('click', () => {
+    sco();
+})
+
 fetch('./unable/i.json')
     .then(response => {
         if (!response.ok) {
